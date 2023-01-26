@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvcdb
+spec:
+  resources:
+    requests:
+      storage: 2Gi
+  accessModes:
+    - ReadWriteOnce

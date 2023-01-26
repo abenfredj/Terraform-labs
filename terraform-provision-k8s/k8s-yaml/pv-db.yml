@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pvdb
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  hostPath:
+    path: /wordpdb
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvcdb
+  namespace: webapp
+spec:
+  resources:
+    requests:
+      storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
