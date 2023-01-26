@@ -1,4 +1,5 @@
 # Terraform-labs
 
-## Terraform to provision workload in kubernetes 
+## Use Terraform to deploy WordPress in kubernetes 
+
 
